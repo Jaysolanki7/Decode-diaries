@@ -18,14 +18,14 @@ int main() {
             totalRings += 2;
         }
 
-        if (floor % 7 == 0 && !(floor % 4 == 0 && floor % 7 == 0)) {
-            totalWaits += 1;
+        if (floor % 7 == 0) {
+            totalWaits += 5;
         }
 
         totalTime += 2;
     }
 
-    totalTime += totalWaits * 5;
+    totalTime += totalWaits ;
 
     cout << "Total rings: " << totalRings << endl;
     cout << "Total waits: " << totalWaits << endl;
