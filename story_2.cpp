@@ -11,11 +11,11 @@ int main() {
     int totalTime = 0;
 
     for (int floor = 1; floor <= F; floor++) {
-        if (floor % 2 != 1) {
-            totalRings += 1;
-        } 
-        else if (floor % 4 == 0) {
+        if (floor % 4 == 0) {
             totalRings += 2;
+        }
+        else if (floor % 2 == 0) {
+            totalRings += 1;
         }
 
         if (floor % 7 == 0) {
@@ -25,7 +25,7 @@ int main() {
         totalTime += 2;
     }
 
-    totalTime += totalWaits ;
+    totalTime += totalWaits;
 
     cout << "Total rings: " << totalRings << endl;
     cout << "Total waits: " << totalWaits << endl;
